@@ -1,3 +1,4 @@
+
 # cloud-run-travisci
 
 This repository shows how to use [Travis CI][tr] to build a container image and
@@ -5,6 +6,8 @@ deploy it to [Google Cloud Run][run] when you push a new commit.
 
 [tr]: https://www.travis-ci.com/
 [run]: https://cloud.google.com/run
+
+![](./logo.png)
 
 ### Table of Contents
 
