@@ -16,10 +16,12 @@ before_install:
 - gcloud components install beta  # until Cloud Run is generally available (GA)
 install: true # no-op
 script:
-- docker build -t "${IMAGE}:${TRAVIS_COMMIT}" ./src
-- docker push "${IMAGE}:${TRAVIS_COMMIT}"
 - |
+  set -ex;
+  docker build -t "${IMAGE}:${TRAVIS_COMMIT}" ./src && \
+  docker push "${IMAGE}:${TRAVIS_COMMIT}" && \
   gcloud beta run deploy "${CLOUD_RUN_SERVICE}" \
     --image="${IMAGE}:${TRAVIS_COMMIT}" \
     --region="${CLOUD_RUN_REGION}" \
-    --allow-unauthenticated
+    --allow-unauthenticated;
+  set +x

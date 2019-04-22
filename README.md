@@ -37,11 +37,12 @@ builds.
 
 ## Step 1: Sign up to Travis CI
 
-Sign up at [www.travis-ci.com][tr] and enable the builds on your forked
-`cloud-run-travisci` repository.
+Sign up at [www.travis-ci.com][tr] and enable **Travis CI** app on your forked
+`cloud-run-travisci` repository at
+https://www.travis-ci.com/account/repositories.
 
-If you have an travis-ci<b>.org</b> account instead, replace `--pro` arguments
-in this tutorial with `--org`.
+> Note: If you have an travis-ci<b>.org</b> account instead of .com, replace
+> `--pro` arguments in this tutorial with `--org`.
 
 ## Step 1: Install required tools
 
@@ -150,16 +151,18 @@ key (such as `GCP_PROJECT_ID`, `IMAGE`, and `CLOUD_RUN_SERVICE`).
 ## Step 6: Commit the changes to your fork
 
 :warning: Do not add `google-key.json` file to your repository as it can be
-reached by others. 
+reached by others.
 
 Make a commit, and push the changes to your fork:
 
 ```sh
 git add google-key.json.enc .travis.yml
 ```
+
 ```sh
 git commit -m "Enable Travis CI"
 ```
+
 ```sh
 git push -u origin master
 ```
@@ -173,6 +176,18 @@ There might be errors that require you to fix.
 If the build succeeds, the output of `gcloud run beta deploy` command will show
 you the URL your app is deployed on! Visit the URL to see if the application
 works!
+
+```
+[...]
+Deploying container to Cloud Run service [example-app] in project [...] region [us-central1]
+Deploying new service...
+Setting IAM Policy.....done
+Creating Revision......done
+Routing traffic........done
+Done.
+Service [example-app] revision [example-app-00001] has been deployed
+and is serving traffic at https://example-app-pwfuv4g72q-uc.a.run.app
+```
 
 
 ## Step 8: Clean up
@@ -191,5 +206,5 @@ gcloud beta run services delete "YOUR-APP-NAME"
 
 ----
 
-👍**Did this tutorial work for you?** Click "✭Star" on the top right of this page
-and let me know!
+👍**Did this tutorial work for you?** Click "✭Star" on the top right of this
+page and let me know!
