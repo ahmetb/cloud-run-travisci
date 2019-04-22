@@ -15,18 +15,16 @@ deploy it to [Google Cloud Run][run] when you push a new commit.
 
 <!-- toc -->
 
-- [cloud-run-travisci](#cloud-run-travisci)
-    - [Table of Contents](#table-of-contents)
-  - [Step 0: Fork this repository](#step-0-fork-this-repository)
-  - [Step 1: Sign up to Travis CI](#step-1-sign-up-to-travis-ci)
-  - [Step 1: Install required tools](#step-1-install-required-tools)
-  - [Step 2: Create a service account for deploying](#step-2-create-a-service-account-for-deploying)
-  - [Step 3: Assign permissions to the service account](#step-3-assign-permissions-to-the-service-account)
-  - [Step 4: Encrypt the service account key](#step-4-encrypt-the-service-account-key)
-  - [Step 5: Configure your project ID](#step-5-configure-your-project-id)
-  - [Step 6: Commit the changes to your fork](#step-6-commit-the-changes-to-your-fork)
-  - [Step 7: View build result](#step-7-view-build-result)
-  - [Step 8: Clean up](#step-8-clean-up)
+- [Step 0: Fork this repository](#step-0-fork-this-repository)
+- [Step 1: Sign up to Travis CI](#step-1-sign-up-to-travis-ci)
+- [Step 1: Install required tools](#step-1-install-required-tools)
+- [Step 2: Create a service account for deploying](#step-2-create-a-service-account-for-deploying)
+- [Step 3: Assign permissions to the service account](#step-3-assign-permissions-to-the-service-account)
+- [Step 4: Encrypt the service account key](#step-4-encrypt-the-service-account-key)
+- [Step 5: Configure your project ID](#step-5-configure-your-project-id)
+- [Step 6: Commit the changes to your fork](#step-6-commit-the-changes-to-your-fork)
+- [Step 7: View build result](#step-7-view-build-result)
+- [Step 8: Clean up](#step-8-clean-up)
 
 <!-- tocstop -->
 
