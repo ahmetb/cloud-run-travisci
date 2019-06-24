@@ -22,6 +22,7 @@ script:
   docker push "${IMAGE}:${TRAVIS_COMMIT}" && \
   gcloud beta run deploy "${CLOUD_RUN_SERVICE}" \
     --image="${IMAGE}:${TRAVIS_COMMIT}" \
+    --platform=managed \
     --region="${CLOUD_RUN_REGION}" \
     --allow-unauthenticated;
   set +x
